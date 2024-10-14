@@ -5,7 +5,7 @@ import Divider from "../Divider";
 import { LogoVerdeIcon } from "../../common/icons";
 import Typography from "../Typography";
 
-export type Section = {
+type Section = {
   title: string;
   items: string[];
 };
