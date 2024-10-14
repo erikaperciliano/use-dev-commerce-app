@@ -6,7 +6,7 @@ export const EloIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_30_271)">
+    <g clipPath="url(#clip0_30_271)">
       <mask
         id="mask0_30_271"
         maskUnits="userSpaceOnUse"
@@ -19,17 +19,17 @@ export const EloIcon = () => (
       </mask>
       <g mask="url(#mask0_30_271)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M0.325684 1.71429C0.325684 0.767511 1.0932 0 2.03997 0H35.1828C36.1296 0 36.8971 0.767512 36.8971 1.71429V22.2857C36.8971 23.2325 36.1296 24 35.1828 24H2.03997C1.0932 24 0.325684 23.2325 0.325684 22.2857V1.71429Z"
           fill="#1A1A1A"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M0.325684 1.5C0.325684 0.671573 0.997257 0 1.82568 0H30.8257C31.6541 0 32.3257 0.671573 32.3257 1.5V19.5C32.3257 20.3284 31.6541 21 30.8257 21H1.82568C0.997257 21 0.325684 20.3284 0.325684 19.5V1.5Z"
           fill="#E5E5E5"
-          fill-opacity="0.01"
+          fillOpacity="0.01"
         />
         <path
           d="M10.549 9.56497C10.813 9.47962 11.0946 9.43411 11.3867 9.43411C12.6655 9.43411 13.7331 10.3149 13.9771 11.4859L15.7898 11.1274C15.3744 9.13824 13.5607 7.64062 11.3867 7.64062C10.8881 7.64062 10.4106 7.71915 9.9624 7.86481L10.549 9.56497Z"

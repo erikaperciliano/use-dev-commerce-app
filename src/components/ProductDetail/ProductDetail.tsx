@@ -3,8 +3,8 @@ import RadioButton from "../RadioButton";
 import Typography from "../Typography";
 import Styles from "./ProductDetail.module.css";
 import { AddCarrinhoIcon } from "../../common/icons/AddCarrinhoIcon";
-import { useCart } from "../../common/context/CartContext";
 import Button from "../Button";
+import { Product } from "../../common/types/product";
 
 type ProductDetailProps = {
   id: number;
@@ -13,6 +13,7 @@ type ProductDetailProps = {
   price: number;
   imageUrl: string;
   colors: string[];
+  addToCart: (product: Product) => void;
 };
 
 function ProductDetail({
@@ -22,10 +23,9 @@ function ProductDetail({
   price,
   imageUrl,
   colors,
+  addToCart,
 }: ProductDetailProps) {
   const [selectedValue, setSelectedValue] = useState("");
-
-  const { addToCart } = useCart();
 
   const handleAddToCart = () => {
     const product = {

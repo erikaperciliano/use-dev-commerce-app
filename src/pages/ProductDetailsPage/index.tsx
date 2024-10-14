@@ -9,7 +9,11 @@ import { PRODUCTS_BASE_URL } from "../../common/constants/endpoints";
 import { Product } from "../../common/types/product";
 import StatusHandler from "../../common/utils/statusHandler";
 
-function ProductDetailsPage() {
+type ProductDetailsPageProps = {
+  addToCart: (product: Product) => void;
+};
+
+function ProductDetailsPage({ addToCart }: ProductDetailsPageProps) {
   const { id } = useParams<{ id: string }>(); // Pega o ID da URL
   const [product, setProduct] = useState<Product | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -52,6 +56,7 @@ function ProductDetailsPage() {
                 price={product.price}
                 imageUrl={product.imageSrc}
                 colors={product.colors}
+                addToCart={addToCart}
               />
             ) : (
               <p>Produto não encontrado.</p>

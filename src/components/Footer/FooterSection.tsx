@@ -1,10 +1,9 @@
-import React from "react";
 import styles from "./FooterSection.module.css";
 import Typography from "../Typography";
 
 type FooterSectionProps = {
-  title: string;
-  items: string[];
+  readonly title: string;
+  readonly items: string[];
 };
 
 export default function FooterSection({
@@ -16,8 +15,8 @@ export default function FooterSection({
     <div className={styles.section} {...props}>
       <Typography variantStyle="body-large-bold">{title}</Typography>
       <ul>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
+        {items.map((item) => (
+          <li key={`footer-item-${item}`}>{item}</li>
         ))}
       </ul>
     </div>

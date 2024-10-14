@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Styles from "./Header.module.scss";
 import { LogoIcon } from "../../common/icons/LogoIcon";
 import { CarrinhoIcon } from "../../common/icons/CarrinhoIcon";
@@ -6,25 +6,22 @@ import { PerfilIcon } from "../../common/icons/PerfilIcon";
 import Input from "../Input";
 import { SearchIcon } from "../../common/icons/SearchIcon";
 import { Link } from "react-router-dom";
-import { useCart } from "../../common/context/CartContext";
 import Typography from "../Typography";
 
 type HeaderProps = {
+  cartCount: number;
   onSearch: (query: string) => void;
 };
 
-const Header = (props: HeaderProps) => {
+const Header = ({ cartCount, onSearch }: HeaderProps) => {
   const [query, setQuery] = useState<string>("");
-
-  const { getCartCount } = useCart();
-  const itemCount = getCartCount();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setQuery(e.target.value);
   };
 
   const handleSearch = (): void => {
-    props.onSearch(query);
+    onSearch(query);
   };
 
   return (
@@ -67,7 +64,7 @@ const Header = (props: HeaderProps) => {
               style={{ display: "flex", alignItems: "center", gap: "4px" }}
             >
               <CarrinhoIcon />
-              <Typography variantStyle="body-small">({itemCount})</Typography>
+              <Typography variantStyle="body-small">({cartCount})</Typography>
             </Link>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import { ShoppingBagIcon } from "../../common/icons/ShoppingBagIcon";
-import { useCart } from "../../common/context/CartContext";
 import Button from "../../components/Button";
 import Divider from "../../components/Divider";
 import Field from "../../components/Field";
@@ -7,9 +6,14 @@ import Typography from "../../components/Typography";
 import Styles from "./CartPage.module.css";
 import { useNavigate } from "react-router-dom";
 
-const CartPage = () => {
-  const { cartItems, removeFromCart } = useCart();
+import { Product } from "../../common/types/product";
 
+type CartPageProps = {
+  cartItems: Product[];
+  removeFromCart: (id: number) => void;
+};
+
+const CartPage = ({ cartItems, removeFromCart }: CartPageProps) => {
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
   const freight = cartItems.length > 0 ? 8 : 0;
 

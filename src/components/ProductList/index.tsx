@@ -17,7 +17,7 @@ const ProductList = ({ title, products }: ProductListProps) => {
       </Typography>
       <div className={Styles.gridContainer}>
         {products.map((product) => (
-          <Link to={`/produto/${product.id}`}>
+          <Link to={`/produto/${product.id}`} key={product.id}>
             <Card
               id={product.id}
               key={`product-card-${product.id}`}
