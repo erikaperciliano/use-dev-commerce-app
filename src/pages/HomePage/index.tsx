@@ -12,6 +12,7 @@ import {
   PRODUCTS_BASE_URL,
 } from "../../common/constants/endpoints";
 import { Product } from "../../common/types/product";
+import StatusHandler from "../../common/utils/statusHandler";
 
 function HomePage() {
   const [categories, setCategories] = useState<Category[]>([]);
@@ -70,21 +71,13 @@ function HomePage() {
         />
       </HeroBanner>
       <main className="container">
-        {isLoadingCategories ? (
-          <p>Carregando categorias...</p>
-        ) : categoriesError ? (
-          <p>{categoriesError}</p>
-        ) : (
+        <StatusHandler isLoading={isLoadingCategories} error={categoriesError}>
           <Categories categories={categories} />
-        )}
+        </StatusHandler>
 
-        {isLoadingProducts ? (
-          <p>Carregando produtos...</p>
-        ) : productsError ? (
-          <p>{productsError}</p>
-        ) : (
+        <StatusHandler isLoading={isLoadingProducts} error={productsError}>
           <ProductList title="Promoções especiais" products={products} />
-        )}
+        </StatusHandler>
       </main>
       <Newsletter onSubscribe={handleSubscribe} />
     </>
