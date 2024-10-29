@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+![](thumbnail.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![](https://img.shields.io/github/license/alura-cursos/android-com-kotlin-personalizando-ui)
 
-Currently, two official plugins are available:
+# Título do Curso: React Query: Manipulando Interações com Mutations
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+CCurso prático de SOLID em React, abordando todos os cinco princípios de design — Responsabilidade Única, Aberto/Fechado, Substituição de Liskov, Segregação de Interfaces e Inversão de Dependência. Aprenda a estruturar componentes e hooks customizados de forma modular, reutilizável e testável. Este curso mostra como aplicar os princípios SOLID para criar uma base de código flexível, desacoplada e escalável. Ideal para desenvolvedores que buscam fortalecer a manutenção e qualidade do código em React.
 
-## Expanding the ESLint configuration
+## 🔨 Funcionalidades do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+O curso abrange a refatoração do Front-end de um e-commerce chamado `useDev`:
 
-- Configure the top-level `parserOptions` property like this:
+- Listagem de categorias e produtos.
+- Exibição do detalhes do produto.
+- Detalhes do carrinho de compras.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ✔️ Técnicas e Tecnologias Utilizadas
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+As principais técnicas e tecnologias abordadas são:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- `SRP (Responsabilidade Única)`: componentes Button e Input apenas renderizam a label, sem lógica extra.
+- `OCP (Aberto/Fechado)`: extensível para novos comportamentos sem alterar o código base dos componentes.
+- `LSP (Substituição de Liskov)`: componentes podem ser trocados por versões especializadas sem quebrar a lógica.
+- `ISP (Segregação de Interfaces)`: interfaces de props incluem apenas o necessário, mantendo os componentes leves.
+- `DIP (Inversão de Dependência)`: hooks customizados dependem de abstrações, não de implementações concretas.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🎯 Desafios do Curso
+
+Implementação de práticas avançadas, como:
+
+- Estruturar componentes seguindo o princípio de Responsabilidade Única (SRP).
+- Aplicar a Inversão de Dependência (DIP) ao utilizar serviços HTTP abstratos.
+- Extender componentes sem modificar a lógica base, seguindo o princípio Aberto/Fechado (OCP).
+- Desacoplar a lógica do `ProductService` do `useFetch` custom hook.
+
+## 🛠️ Abrir e Rodar o Projeto
+
+Após baixar o projeto, você pode abrir com seu editor de código preferido. Siga estes passos:
+
+- Abra o terminal no diretório do projeto.
+- Execute `npm install` para instalar as dependências.
+- Inicie o servidor de desenvolvimento com `npm run dev`.
+- Acesse `http://localhost:5173` no navegador para ver o projeto ou o endereço que for exibido no terminal.
