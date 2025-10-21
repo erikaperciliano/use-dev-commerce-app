@@ -20,7 +20,7 @@ As principais técnicas e tecnologias abordadas são:
 - `ISP (Segregação de Interfaces)`: interfaces de props incluem apenas o necessário, mantendo os componentes leves.
 - `DIP (Inversão de Dependência)`: hooks customizados dependem de abstrações, não de implementações concretas.
 
-## 🎯 Desafios do Curso
+## 🎯 Desafios
 
 Implementação de práticas avançadas, como:
 
