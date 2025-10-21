@@ -107,12 +107,12 @@ const CartPage = ({ cartItems, removeFromCart }: CartPageProps) => {
             <Button
               onClick={handleRedirect}
               variant="secondary"
-              text="Continuar comprando"
-            />
+            >Continuar comprando</Button>
             <Button
               onClick={() => console.log("pagamento")}
-              text="Ir para pagamento"
-            />
+            >
+              Ir para pagamento
+            </Button>
           </div>
         </div>
       </section>
