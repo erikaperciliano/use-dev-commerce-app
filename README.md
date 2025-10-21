@@ -1,10 +1,10 @@
-# Título do Curso: SOLID aplicado ao React: melhorando a modularidade e flexibilidade do código
+# SOLID aplicado ao React: melhorando a modularidade e flexibilidade do código
 
-Curso prático de SOLID em React, abordando todos os cinco princípios de design — Responsabilidade Única, Aberto/Fechado, Substituição de Liskov, Segregação de Interfaces e Inversão de Dependência. Aprenda a estruturar componentes e hooks customizados de forma modular, reutilizável e testável. Este curso mostra como aplicar os princípios SOLID para criar uma base de código flexível, desacoplada e escalável. Ideal para desenvolvedores que buscam fortalecer a manutenção e qualidade do código em React.
+Métodologia prático de SOLID em React, abordando todos os cinco princípios de design — Responsabilidade Única, Aberto/Fechado, Substituição de Liskov, Segregação de Interfaces e Inversão de Dependência. Estruturar componentes e hooks customizados de forma modular, reutilizável e testável. Este projeto mostra como aplicar os princípios SOLID para criar uma base de código flexível, desacoplada e escalável. Ideal para desenvolvedores que buscam fortalecer a manutenção e qualidade do código em React.
 
 ## 🔨 Funcionalidades do Projeto
 
-O curso abrange a refatoração do Front-end de um e-commerce chamado `useDev`:
+Abrange a refatoração do Front-end de um e-commerce chamado `useDev`:
 
 - Listagem de categorias e produtos.
 - Exibição do detalhes do produto.
