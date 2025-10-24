@@ -2,7 +2,7 @@ import { ReactNode, ButtonHTMLAttributes } from "react";
 import classnames from "classnames"; // Para combinar classes dinamicamente
 import Styles from "./Button.module.css";
 
-type ButtonProps = {
+export type ButtonProps = {
   children?: ReactNode;
   variant?: "primary" | "secondary";
   size?: "small" | "medium" | "large"; // Define diferentes tamanhos
