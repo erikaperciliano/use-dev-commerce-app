@@ -7,11 +7,12 @@ import CartList from "../../components/CartList";
 import CartSummary from "../../components/CartSummary";
 
 type CartPageProps = {
+  cartCount: number;
   cartItems: Product[];
   removeFromCart: (id: number) => void;
 };
 
-const CartPage = ({ cartItems, removeFromCart }: CartPageProps) => {
+const CartPage = ({ cartCount, cartItems, removeFromCart }: CartPageProps) => {
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
   const freight = cartItems.length > 0 ? 8 : 0;
 
@@ -31,7 +32,7 @@ const CartPage = ({ cartItems, removeFromCart }: CartPageProps) => {
         <section className={Styles.cartPage}>
           <CartList cartItems={cartItems} onRemove={removeFromCart} />
             <CartSummary 
-            cartItems={cartItems} 
+            itemCount={cartCount} 
             total={total} 
             freight={freight} 
             handleRedirect={handleRedirect}

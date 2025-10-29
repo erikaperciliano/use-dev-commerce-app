@@ -1,5 +1,4 @@
 import { ShoppingBagIcon } from "../../common/icons/ShoppingBagIcon";
-import { Product } from "../../common/types/product";
 import CartActions, { CartActionsProps } from "../CartActions";
 import Divider from "../Divider";
 import Field from "../Field";
@@ -7,14 +6,14 @@ import Typography from "../Typography";
 import Styles from './CartSummary.module.css'
 
 export type CartSummaryProps = {
-    cartItems: Product[];
+    itemCount: number;
     total: number;
     freight: number;
     handleRedirect: () => void;
 } & CartActionsProps;
 
 
-const CartSummary = ({ cartItems, total, freight, handleRedirect, onPayment }: CartSummaryProps) => {
+const CartSummary = ({ itemCount, total, freight, handleRedirect, onPayment }: CartSummaryProps) => {
     return(
          <div className={Styles.cartSummary}>
           <Typography variantStyle="heading-small">Sumário</Typography>
@@ -30,7 +29,7 @@ const CartSummary = ({ cartItems, total, freight, handleRedirect, onPayment }: C
           </div>
           <div className={Styles.summaryResume}>
             <Typography variantStyle="body-small-bold">
-              {cartItems.length} Produtos
+              {itemCount}{itemCount > 1 ? ' Produtos' : 'Produto'}
             </Typography>
             <Typography variantStyle="body-small-bold">R$ {total}</Typography>
             <Typography variantStyle="body-small-bold">Frete:</Typography>

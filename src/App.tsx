@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FooterConfig from "./components/Footer/FooterConfig";
 import HomePage from "./pages/HomePage";
@@ -8,6 +7,7 @@ import ScrollToTop from "./common/utils/ScrollToTop";
 import CartPage from "./pages/CartPage";
 import WithCart from "./common/utils/withCart";
 import { CartProps } from "./common/types/cart";
+import Header from "./components/Header/Index";
 
 function App({ cartItems, cartCount, addToCart, removeFromCart }: CartProps) {
   return (
@@ -24,7 +24,7 @@ function App({ cartItems, cartCount, addToCart, removeFromCart }: CartProps) {
           <Route
             path="/carrinho"
             element={
-              <CartPage cartItems={cartItems} removeFromCart={removeFromCart} />
+              <CartPage cartCount={cartCount} cartItems={cartItems} removeFromCart={removeFromCart} />
             }
           />
         </>
